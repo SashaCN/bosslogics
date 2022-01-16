@@ -47,7 +47,7 @@ footer
   form 
     margin-bottom: 35px
   ul 
-    width: 50%
+    width: 80%
 
 h4 
   font-size: 1.4rem
@@ -150,6 +150,9 @@ label
     margin-bottom: 200px
 
 @media screen and (max-width: 1230px)
+  main 
+    padding-top: 100px 
+
   .wrapper 
     width: 90%
 
@@ -160,20 +163,52 @@ label
     padding-bottom: 100px
 
 @media screen and (max-width: 1100px)
-  .about-company,
+  header 
+    min-height: 600px
+    background-size: 80%
+
+  h1, h2 
+    font-size: 5rem
+    line-height: 5.5rem
+
+  .btn 
+    padding: 15px 40px
+
+  .menu
+    width: 70%
+    margin: 0 25px 0 10%
+
+  .together,
+  .platforms, 
+  .preferences,
+  .trust,
+  .partners
+    margin-bottom: 150px
+
+  .platforms
+    align-items: start
+
+  .get-demo 
+    padding-bottom: 50px
+
+  .get-demo:before
+    width: 70% 
+    height: 140%
+
   .contact 
-    width: 25%
+    width: 30%
 
   .contacts
     width: 20%
 
   .contact 
     text-align: center
+    form 
+      flex-wrap: wrap 
+      margin-bottom: 15px
     ul 
       margin: 0 auto
 
-  form 
-    flex-wrap: wrap 
   
   .submit, form .btn
     width: 100%
@@ -182,34 +217,103 @@ label
     width: 100%
     margin-bottom: 10px
   
+@media screen and (max-width: 1000px) 
+  .header-line 
+    margin: 0
+
+  main 
+    padding-top: 75px
+
+  .links,
+  .contacts
+    width: 20%
+  
+  @media screen and (max-width: 930px) 
+    body 
+      font-size: 8px
+
+    .btn 
+      padding: 15px 30px
+
+    
+    .together-img 
+      width: 45%  
+    .together-about 
+      width: 50%
+
+    .platforms,
+    .trust 
+      flex-wrap: wrap
+
+    .platforms-img,
+    .trust-img
+      order: -1
+      width: 60%
+      margin: 0 auto 50px
+
+    .platforms-img:before 
+      top: -10%
+      height: 120%
+      width: 100%
+
+    .platforms-about,
+    .trust-about 
+      width: 100%
+
+    .flex-center 
+      margin-bottom: 40px
+    .preference 
+      width: 30%
+      padding: 0 30px
+
+  .footer-content 
+    flex-wrap: wrap
+    justify-content: space-between
+    width: 80%
+    margin: 0 auto
+
+  .company-info,
+  .contact 
+    width: 45%
+    order: 1
+    margin-bottom: 40px
 
 
+  .links, 
+  .contacts 
+    order: 2
+    margin-bottom: 40px
 
-  // .footer-content 
-  //   flex-wrap: wrap
-  //   justify-content: center
+  .links-list 
+    display: flex
+    justify-content: space-between 
+    flex-wrap: wrap
+    li 
+      width: 30%
+      text-align: center
 
-  // .company-info,
-  // .contact 
-  //   width: 40%
-  //   order: 1
-  //   margin-bottom: 40px
+  .links 
+    width: 35%
 
-  // .company-info 
-  //   margin-right: 10%
+  .contacts 
+    width: 50%
 
-  // .links, 
-  // .contacts 
-  //   order: 2
-  //   width: 30%
+  .contacts-wrap 
+    display: flex 
+    justify-content: space-between 
+    address
+      width: 45%
+    .info-wrap 
+      width: 55%
 
-  // .links
-  //   margin-right: 10%
+  @media screen and (max-width: 850px) 
+    .contacts 
+      width: 60%
+    
+    .links 
+      li 
+        width: 50%
 
-  // .links-list 
-  //   display: flex
-  //   justify-content: space-between 
-  //   flex-wrap: wrap
-  //   li 
-  //     width: 30%
-  //     text-align: center
+  @media screen and (max-width: 700px) 
+    .footer-content 
+      width: 100%
