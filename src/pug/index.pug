@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+html(lang="en")
+	head
+		meta(charset="UTF-8")
+		meta(name="viewport", content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum-scale=2.0, minimum-scale=1.0")
+		title Home - BOSS Logics
+		link(rel="stylesheet", href="css/style.css")
+	body
+		include helper/vars
+		include helper/mixin
+		include components/header
+		main
+			.wrapper
+				section.together.flex-line
+					.together-img 
+						img(src="img/rings-banner.jpg", alt="rings to be together")
+					.together-about 
+						.border 
+							h2 Your customers don't have to be in-store for you to be together.
+						p.section-text Introducing a virtual in-store experience that sets a new standard for personalized online interactions.
+						.button-wrap 
+							a.btn.filled-btn(href="#") Find out more 
+				section.platforms.flex-line 
+					.platforms-about 
+						.border 
+							h2 A different type of software platform			
+						.types 
+							h3 Modeled
+							p.section-text During development, we model against your existing (or aspirational) processes and workflows. It’s the closest thing to bespoke software you’ll find.
+							h3 Collaborative  
+							p.section-text System workflows that are created around your product development process, not the other way around.    
+							h3 Communicative  
+							p.section-text Your products don’t live in a vacuum, and neither should your software. BOSS Logics is designed to integrate directly with your other systems.
+					.platforms-img 
+						img(src="img/main-banner.png", alt="")
+				section.preferences 
+					h2 What does that mean for you?
+					.flex-center 
+						.preference
+							img(src="img/pref1.png", alt="Streamlined processes")
+							h3 Streamlined processes  
+							p.section-text Contrary to popular belief, Lorem Ipsum is not simply random text. 
+						.preference
+							img(src="img/pref2.png", alt="Quicker time to market")
+							h3 Quicker time to market
+							p.section-text Contrary to popular belief, Lorem Ipsum is not simply random text. 
+						.preference
+							img(src="img/pref3.png", alt="More agile workflows")
+							h3 More agile workflows  
+							p.section-text Contrary to popular belief, Lorem Ipsum is not simply random text.
+					.button-wrapper 
+						a.btn.filled-btn(href="#") Learn More
+				section.trust.flex-line 
+					.trust-img 
+						img(src="img/trust-banner.jpg", alt="Trusted by leading brands")
+					.trust-about 
+						.border 
+							h2 Trusted by leading brands
+						blockquote  
+							p.section-text.quote “Our actual go-live was perfect. It was seamless. The integration has been amazing. Our old system involved manual data entry for everything, but with the BOSS Integration, it’s as easy as changing a flag and getting updates from our ERP system.”
+							cite Dean LeNeve 
+							em Director of Operations, David Webb  
+				.partners.flex-line 
+					.partner-wrap
+						img(src="img/partner1.png", alt="partner")
+					.partner-wrap
+						img(src="img/partner2.png", alt="partner")
+					.partner-wrap
+						img(src="img/partner3.png", alt="partner")
+					.partner-wrap
+						img(src="img/partner4.png", alt="partner")
+					.partner-wrap
+						img(src="img/partner5.png", alt="partner")
+					.partner-wrap
+						img(src="img/partner6.png", alt="partner")
+					.partner-wrap
+						img(src="img/partner7.png", alt="partner")
+					.partner-wrap
+						img(src="img/partner8.png", alt="partner")
+				section.get-demo.flex-line 
+					.get-demo-about 
+						.border 
+							h2 Ready to see what BOSS Logics can do for you?
+						.button-wrap 
+							a.btn.filled-btn(href="#") Get a demo
+					.get-demo-img  
+						img(src="img/demo-banner.png", alt="laptop - get demo")
+		include components/footer

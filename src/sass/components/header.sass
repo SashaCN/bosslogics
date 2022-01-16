@@ -1,0 +1,138 @@
+
+  
+html 
+  font-size: 10px
+body 
+  font-family: "Geometria", Arial, Helvetica, sans-serif
+  margin: 0
+  overflow-x: hidden
+.wrapper 
+  width: 80%
+  margin: 0 auto
+.flex-line
+  display: flex
+  justify-content: space-between
+  align-items: center
+ul 
+  list-style: none
+
+// header
+
+header 
+  background: #fff url(../img/bg_header.jpg) right top no-repeat
+  background-size: 70%
+  min-height: 800px
+
+// header menubar
+
+.logo 
+  width: 15% 
+  img 
+    width: 100%
+
+.header-line 
+  padding: 30px 0
+  margin-bottom: 40px
+  ul  
+    text-transform: uppercase
+    padding: 0
+    margin: 0
+.menu 
+  width: 50%
+  margin: 0 5% 0 20%
+  a
+    position: relative
+    font-size: 1.3rem
+    font-weight: 500
+    letter-spacing: 1px
+    color: #fefefe 
+    text-decoration: none
+    &:before 
+      content: ''
+      position: absolute
+      top: 120%
+      left: 0
+      width: 100%
+      height: 3px 
+      border-radius: 1px
+      background-color: #fefefe
+      transform: scaleX(0)
+      transition: all .2s ease-out
+    &:hover 
+      &:before
+        transform: scaleX(1)
+.soc-line 
+  width: 10%
+  a
+    display: inline-block
+  img 
+    height: 20px
+    width: 100%
+    filter: invert(100%)
+    transition: all .2s ease-out
+    &:hover 
+      transform: scale(1.2)
+
+// header content
+
+.border 
+  border-left: 3px solid $primary 
+  padding-left: 25px
+
+h1, h2, h3, h4, h5, h6
+  color: #1a1a1a
+
+h1,h2 
+  font-size: 7rem
+  line-height: 7.4rem
+  font-weight: 500
+  margin-bottom: 30px
+  span 
+    font-size: 3.5rem
+    font-weight: bold
+    letter-spacing: 4px
+    color: $trs
+    text-transform: uppercase
+    line-height: inherit
+    -webkit-text-stroke: 2px $primary
+
+.header-banner,
+.header-about 
+  width: 50%
+  img 
+    width: 100%
+
+.section-text 
+  font-size: 1.8rem
+  line-height: 2.6rem
+  color: #2b2b2b
+  margin-bottom: 35px
+
+.button-wrap 
+  justify-content: start
+
+.btn
+  display: inline-block
+  font-size: 1.4rem
+  font-weight: bold
+  letter-spacing: 1px
+  text-transform: uppercase
+  padding: 15px 50px
+  border: 2px solid $primary
+  border-radius: 25px
+  text-decoration: none
+  transition: all .5s ease
+
+.filled-btn 
+  color: #fff
+  background-color: $primary 
+  &:hover 
+    color: $primary
+    background-color: $trs
+
+.glass-btn 
+  color: #2b2b2b
+  margin-left: 30px
+  &:hover 
+    background-color: $primary
+    color: #fff
