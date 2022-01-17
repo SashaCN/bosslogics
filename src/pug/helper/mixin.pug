@@ -2,13 +2,18 @@ mixin soc
   ul.soc-line.flex-line
     li
       a(href="#") 
-        img(src="img/fb.svg", alt="BOSSLOGICS in Facebook")
+        svg.fb 
+          use(xlink:href="img/sprite.svg#fb")
+        //- img(src="img/fb.svg", alt="BOSSLOGICS in Facebook")
     li
       a(href="#") 
-        img(src="img/tw.svg", alt="BOSSLOGICS in Twitter")
+        svg 
+          use(xlink:href="img/sprite.svg#tw")
     li
       a(href="#") 
-        img(src="img/inst.svg", alt="BOSSLOGICS in Instagram")
+        svg 
+          use(xlink:href="img/sprite.svg#inst")
     li
       a(href="#") 
-        img(src="img/in.svg", alt="BOSSLOGICS in Linkedin")
+        svg 
+          use(xlink:href="img/sprite.svg#in")

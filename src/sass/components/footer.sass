@@ -42,6 +42,32 @@ footer
     padding-left: 25px
     font-weight: 300
 
+.email,
+.tel,
+address
+  position: relative
+  &::before
+    content: ''
+    position: absolute
+    top: calc( 50% - 5.5px ) 
+    left: 0
+    width: 14px
+    height: 11px
+    background-image: url(../img/mail.png)
+    background-repeat: no-repeat
+
+.tel::before
+  top: calc( 50% - 7.5px ) 
+  width: 14px
+  height: 15px
+  background-image: url(../img/tel.png)
+
+address::before
+  top: 0 
+  width: 14px
+  height: 15px
+  background-image: url(../img/gps.png)
+
 .contact 
   width: 40%
   form 
@@ -161,6 +187,9 @@ label
 
   .get-demo 
     padding-bottom: 100px
+    &:before 
+      right: -5vw
+  
 
 @media screen and (max-width: 1100px)
   header 
@@ -228,43 +257,43 @@ label
   .contacts
     width: 20%
   
-  @media screen and (max-width: 930px) 
-    body 
-      font-size: 8px
+@media screen and (max-width: 930px) 
+  body 
+    font-size: 8px
 
-    .btn 
-      padding: 15px 30px
+  .btn 
+    padding: 15px 30px
 
-    
-    .together-img 
-      width: 45%  
-    .together-about 
-      width: 50%
+  
+  .together-img 
+    width: 45%  
+  .together-about 
+    width: 50%
 
-    .platforms,
-    .trust 
-      flex-wrap: wrap
+  .platforms,
+  .trust 
+    flex-wrap: wrap
 
-    .platforms-img,
-    .trust-img
-      order: -1
-      width: 60%
-      margin: 0 auto 50px
+  .platforms-img,
+  .trust-img
+    order: -1
+    width: 60%
+    margin: 0 auto 50px
 
-    .platforms-img:before 
-      top: -10%
-      height: 120%
-      width: 100%
+  .platforms-img:before 
+    top: -10%
+    height: 120%
+    width: 100%
 
-    .platforms-about,
-    .trust-about 
-      width: 100%
+  .platforms-about,
+  .trust-about 
+    width: 100%
 
-    .flex-center 
-      margin-bottom: 40px
-    .preference 
-      width: 30%
-      padding: 0 30px
+  .flex-center 
+    margin-bottom: 40px
+  .preference 
+    width: 30%
+    padding: 0 30px
 
   .footer-content 
     flex-wrap: wrap
@@ -306,14 +335,299 @@ label
     .info-wrap 
       width: 55%
 
-  @media screen and (max-width: 850px) 
-    .contacts 
-      width: 60%
-    
-    .links 
-      li 
-        width: 50%
+@media screen and (max-width: 900px)
+  .glass-btn 
+    margin-left: 10px
 
-  @media screen and (max-width: 700px) 
-    .footer-content 
+  header 
+    .menu, .soc-line
+      display: none
+
+  .active-burger 
+    .menu 
+      display: block
+    .logo, .menu .flex-line, .soc-line
+      position: fixed 
+      z-index: 3
+    .menu .flex-line 
+      top: 80px 
+      left: 50%
+      flex-direction: column
+      justify-content: center
+      align-items: center
+      transform: translateX(-50%)
+      li
+        margin-bottom: 30px
+      a
+        font-size: 2rem
+        color: $primary
+        &::before
+          background-color: $primary
+    .soc-line 
+      display: flex
+      width: 30%
+      top: 410px
+      left: 50%
+      transform: translateX(-50%)
+      svg 
+        height: 40px
+        fill: $primary
+    .burger-bg 
+      display: block
+      position: fixed 
+      top: 0
+      left: 0
+      z-index: 2
+      width: 100vw
+      height: 100vh
+      background-color: #fff
+    .burger-close 
+      display: block
+
+
+  .burger
+    display: block
+    width: 40px 
+    height: 26px
+    span 
+      position: relative
+      display: block
+    span,
+    span:before,
+    span:after
+      width: 100% 
+      height: 6px 
+      background-color: #fff
+      border-radius: 4px
+    span:before,
+    span:after 
+      content: ''
+      position: absolute 
+      left: 0
+    span:before
+      top: 20px
+    span:after
+      top: 10px
+
+  .burger-close 
+    position: fixed 
+    z-index: 3
+    right: 5vw
+    top: 30px
+    width: 50px
+    height: 40px
+    &::before,
+    &::after
+      content: ''
+      position: absolute 
+      top: 0
+      left: 0
+      border-radius: 4px
       width: 100%
+      height: 6px
+      background-color: $primary
+    &::before 
+      top: 15px
+      transform: rotate(45deg)
+    &::after 
+      top: 15px
+      transform: rotate(-45deg)
+      
+  .partner-wrap 
+    width: 30%
+    margin-bottom: 30px
+
+@media screen and (max-width: 850px) 
+  .contacts 
+    width: 60%
+  
+  .links 
+    li 
+      width: 50%
+
+@media screen and (max-width: 800px) 
+  header 
+    background-size: 70%
+  .logo 
+    width: 25%
+
+  .header-content 
+    flex-wrap: wrap-reverse
+
+  .together 
+    flex-wrap: wrap 
+
+  main 
+    padding-top: 150px
+
+  .header-banner,
+  .together-img,
+  .trust-img 
+    width: 80%
+    margin: 0 auto 50px
+
+  .together-img:before 
+    top: 10%
+    height: 100%
+    width: 70%
+
+  .header-about,
+  .together-about 
+    width: 100% 
+
+  .flex-center 
+    flex-wrap: wrap 
+
+  .preference 
+    width: 40% 
+    margin-bottom: 30px
+
+  .partner-wrap 
+    width: 40%
+
+  .get-demo:before 
+    bottom: -30%
+
+  .partners, .platforms, .preferences, .together, .trust 
+    margin-bottom: 100px 
+
+  .get-demo-about
+    padding: 0
+
+@media screen and (max-width: 700px) 
+  .footer-content 
+    width: 100%
+
+  h1, h2
+    font-size: 4rem
+    line-height: 4.5rem
+
+  .quote 
+    font-size: 1.8rem
+    line-height: 2.4rem
+
+  .get-demo 
+    flex-wrap: wrap 
+    &:before 
+      bottom: 0
+      height: 80%
+      width: 80vw
+
+  .get-demo-img
+    width: 80%
+    margin: 0 auto
+
+  .get-demo-about 
+    width: 100%
+
+  .preference
+    padding: 0 10px
+
+@media screen and (max-width: 600px)
+  .active-burger 
+    .soc-line 
+      width: 50%
+
+  .preference
+    width: 55%
+    padding: 0
+
+  .partners 
+    justify-content: space-around
+
+  .company-info,
+  .links, 
+  .contacts,
+  .contact 
+    width: 100%
+    text-align: center
+
+  .links li
+    width: 30%
+
+  .contacts-wrap
+    .info-wrap,
+    address 
+      width: 50%
+
+  .footer-menu 
+    margin: 0 -10px
+    li
+      margin: 0 10px
+
+  .email:before 
+    left: 15%
+  .tel:before 
+    left: 25%
+  address:before 
+    left: 25%
+
+@media screen and (max-width: 500px)
+  .header-banner,
+  .together-img,
+  .types-img,
+  .trust-img,
+  .platforms-img,
+  .get-demo-img 
+    width: 100%
+
+  .partner-wrap 
+    width: 100%
+    
+  .get-demo:before 
+    bottom: -20%
+    height: 90%
+    width: 100vw
+
+  .preference 
+    width: 70%
+
+  .footer-line 
+    text-align: center
+    .copy 
+      margin-right: 20px
+
+  .email:before 
+    left: 5%
+  .tel:before 
+    left: 15%
+  address:before 
+    left: 15%
+
+@media screen and (max-width: 400px)
+  .logo 
+    width: 50%
+
+  header 
+    background-size: 50%
+
+  .active-burger 
+    .soc-line 
+      width: 80%
+
+  .preference 
+    width: 100%
+
+  .button-wrap 
+    flex-wrap: wrap
+    &>.btn 
+      margin: 0
+      margin-bottom: 10px
+
+  .btn 
+    width: 100%
+    box-sizing: border-box
+    text-align: center
+
+  .contacts-wrap 
+    flex-wrap: wrap
+    .info-wrap, address 
+      width: 100%
+      
+    
+  .email:before 
+    left: 20%
+  .tel:before 
+    left: 30%
+  address:before 
+    left: 30%
